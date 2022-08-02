@@ -3,7 +3,9 @@ import Home from "../components/layout/Home"
 const Anasayfa = () => {
 
   return (
-    <Home />
+    <>
+      <Home />
+    </>
   )
 }
 
