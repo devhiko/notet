@@ -1,42 +1,38 @@
+import Search from "../notlar/Search";
 import Fab from '@mui/material/Fab'
-import Backdrop from '@mui/material/Backdrop';
-import { useState } from 'react';
-import Search from './Search';
-import styles from './NotListe.module.css'
-import Not from './Not';
+import Backdrop from "@mui/material/Backdrop";
+import styles from './GorevListe.module.css'
+import Gorev from "./Gorev";
+import { useState } from "react";
 
-const NotListe = () => {
+
+const GorevListe = () => {
+  // modal state
   const [open, setOpen] = useState(false)
   const handleClose = () => setOpen(false)
   const handleToggle = () => setOpen(!open)
 
-  const notlar = [
+  const gorevler = [
     {
       id: Math.random() * 1000,
-      title: 'Not başlığı 1',
       content: 'lorem ipsum dolor sit amet',
-      createdAt: '16:46',
     },
     {
       id: Math.random() * 1000,
-      title: 'Not başlığı 2',
       content: 'lorem ipsum amet dolor sit',
-      createdAt: '17:45',
     },
     {
       id: Math.random() * 1000,
-      title: 'Not başlığı 3',
       content: 'lorem dolor amet sit',
-      createdAt: '18:20',
     },
   ]
 
-  const not = notlar.map((not) => <Not key={not.id} not={not} />)
+  const gorev = gorevler.map((gorev) => <Gorev key={gorev.id} gorev={gorev} />)
 
   return (
     <>
       <Search />
-      <div>{not}</div>
+      <div>{gorev}</div>
       <Fab
         className={styles.fab}
         color="secondary"
@@ -60,4 +56,4 @@ const NotListe = () => {
   )
 }
 
-export default NotListe
+export default GorevListe
