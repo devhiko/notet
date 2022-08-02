@@ -1,1 +1,1 @@
-* stil ekle
+* MUI yi projeden sil
