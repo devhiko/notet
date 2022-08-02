@@ -4,7 +4,7 @@
   justify-content: space-around;
   margin: 1rem auto;
   padding: 0;
-  background: #f3f3f3;
+  /* background: #f3f3f3; */
 }
 
 .container svg {
@@ -14,7 +14,7 @@
 }
 
 .search {
-  background-color: #ccc;
+  /* background-color: #ccc; */
   width: auto;
   padding: .5rem;
 }
