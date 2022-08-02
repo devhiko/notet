@@ -1,1 +1,2 @@
-* MUI yi projeden sil
+* stil ekle
+* kodu okunabilir yap
