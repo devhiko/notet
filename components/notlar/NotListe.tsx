@@ -1,14 +1,18 @@
 import Fab from '@mui/material/Fab'
-import Backdrop from '@mui/material/Backdrop';
 import { useState } from 'react';
 import Search from './Search';
 import styles from './NotListe.module.css'
 import Not from './Not';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Modal from '@mui/material/Modal';
+import Typography from '@mui/material/Typography';
+import { Button } from '@mui/material';
 
 const NotListe = () => {
-  const [open, setOpen] = useState(false)
-  const handleClose = () => setOpen(false)
-  const handleToggle = () => setOpen(!open)
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const notlar = [
     {
@@ -41,21 +45,26 @@ const NotListe = () => {
         className={styles.fab}
         color="secondary"
         aria-label="add"
-        sx={{ margin: '0' }}
-        onClick={handleToggle}>
+        onClick={handleOpen}>
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-plus" viewBox="0 0 16 16">
           <path
             d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
           />
         </svg>
       </Fab>
-      <Backdrop
-        sx={{ color: '#fff', zIndex: 1200 }}
+      <Modal
         open={open}
-        onClick={handleClose}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
       >
-        ta daa
-      </Backdrop>
+        <Box className={styles.addmodal} component='form'>
+          <Typography sx={{ textAlign: 'center' }} gutterBottom variant="h6" component="h6">Not Ekleyin</Typography>
+          <TextField size='small' label='Not başlığı'></TextField>
+          <TextField size='small' label='Not içeriği'></TextField>
+          <Button variant="contained" color='secondary'>Ekle</Button>
+        </Box>
+      </Modal>
     </>
   )
 }

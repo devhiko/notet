@@ -3,6 +3,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Checkbox from '@mui/material/Checkbox';
 import { useState } from "react";
+import styles from './Gorev.module.css'
 
 type GorevProps = {
   gorev: {
@@ -20,13 +21,8 @@ const Gorev = ({ gorev }: GorevProps) => {
 
   return (
     <Card key={gorev.id}
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        margin: '1rem .5rem',
-        background: checked ? '#d6d6d6' : '#fff'
-      }}
-      onClick={() => alert('edit mode')}
+      sx={{ background: checked ? '#d6d6d6' : '#fff' }}
+      className={styles.card}
     >
       <Checkbox
         checked={checked}
@@ -34,8 +30,8 @@ const Gorev = ({ gorev }: GorevProps) => {
         inputProps={{ 'aria-label': 'controlled' }}
         color='secondary'
       />
-      <CardContent style={{ padding: '1rem 0' }}>
-        <Typography style={{ textDecoration: checked ? 'line-through' : 'none' }} variant="subtitle1" component="span">{gorev.content}
+      <CardContent className={styles['card-content']}>
+        <Typography sx={{ textDecoration: checked ? 'line-through' : 'none' }} variant="subtitle1" component="span">{gorev.content}
         </Typography>
       </CardContent>
     </Card>

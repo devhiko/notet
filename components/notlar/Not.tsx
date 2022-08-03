@@ -1,6 +1,7 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import styles from './Not.module.css'
 
 type NotProps = {
   not: {
@@ -13,7 +14,7 @@ type NotProps = {
 
 const Not = ({ not }: NotProps) => {
   return (
-    <Card sx={{ margin: '1rem .5rem', textAlign: 'justify', cursor: 'pointer' }} onClick={() => alert('click')}>
+    <Card className={styles.card} onClick={() => alert('click')}>
       <CardContent>
         <Typography gutterBottom variant="h6" component="div">
           {not.title}

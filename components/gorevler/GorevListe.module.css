@@ -3,4 +3,10 @@
   font-size: 1.75rem;
   bottom: 3%;
   right: 3%;
+  margin: 0;
+}
+
+.backdrop {
+  color: '#fff';
+  z-index: 1200;
 }

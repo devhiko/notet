@@ -32,11 +32,11 @@ const GorevListe = () => {
     <>
       <Search />
       <div>{gorev}</div>
+      {/* <div>Tamamlandı - 1</div> */}
       <Fab
         className={styles.fab}
         color="secondary"
         aria-label="add"
-        sx={{ margin: '0' }}
         onClick={handleToggle}>
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-plus" viewBox="0 0 16 16">
           <path
@@ -45,7 +45,7 @@ const GorevListe = () => {
         </svg>
       </Fab>
       <Backdrop
-        sx={{ color: '#fff', zIndex: 1200 }}
+        className={styles.backdrop}
         open={open}
         onClick={handleClose}
       >
