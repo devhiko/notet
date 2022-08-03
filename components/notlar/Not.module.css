@@ -3,3 +3,17 @@
   text-align: justify;
   cursor: pointer;
 }
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions button {
+  fill: #ccc;
+  margin-bottom: .5rem;
+}
+
+.actions button:hover {
+  fill: purple;
+}

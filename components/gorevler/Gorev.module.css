@@ -1,9 +1,18 @@
 .card {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin: 1rem.5rem;
+  margin: 1rem .5rem;
 }
 
 .card-content {
   padding: 1rem 0;
+}
+
+.actions button {
+  fill: #ccc;
+}
+
+.actions button:hover {
+  fill: purple;
 }

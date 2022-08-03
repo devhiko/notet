@@ -1,4 +1,1 @@
-* modulleri dönüştür ... -> {...}
-* stil ekle
-* ts e dönüştür
-* kodu okunabilir yap
+* Diğerinin aynısı olmaya başladığı için burada bitirdim. ------------- END -------------

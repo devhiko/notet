@@ -1,6 +1,4 @@
-import TextField from '@mui/material/TextField'
-import Box from '@mui/material/Box'
-import InputAdornment from '@mui/material/InputAdornment'
+import { TextField, Box, InputAdornment } from '@mui/material'
 import styles from './Search.module.css'
 
 const Search = () => {
@@ -20,6 +18,7 @@ const Search = () => {
         }}
         variant="outlined"
         size='small'
+        placeholder='Bir şey arayın'
         fullWidth
       />
     </Box>
