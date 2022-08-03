@@ -2,7 +2,16 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
-const Not = ({ not }: any) => {
+type NotProps = {
+  not: {
+    id: number
+    title: string
+    content: string
+    createdAt: string
+  }
+}
+
+const Not = ({ not }: NotProps) => {
   return (
     <Card sx={{ margin: '1rem .5rem', textAlign: 'justify', cursor: 'pointer' }} onClick={() => alert('click')}>
       <CardContent>

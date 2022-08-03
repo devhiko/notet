@@ -5,7 +5,6 @@ import styles from './GorevListe.module.css'
 import Gorev from "./Gorev";
 import { useState } from "react";
 
-
 const GorevListe = () => {
   // modal state
   const [open, setOpen] = useState(false)

@@ -4,7 +4,14 @@ import Typography from '@mui/material/Typography';
 import Checkbox from '@mui/material/Checkbox';
 import { useState } from "react";
 
-const Gorev = ({ gorev }: any) => {
+type GorevProps = {
+  gorev: {
+    id: number
+    content: string
+  }
+}
+
+const Gorev = ({ gorev }: GorevProps) => {
   // checkbox state
   const [checked, setChecked] = useState(false);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,7 +35,8 @@ const Gorev = ({ gorev }: any) => {
         color='secondary'
       />
       <CardContent style={{ padding: '1rem 0' }}>
-        <Typography style={{ textDecoration: checked ? 'line-through' : 'none' }} variant="subtitle1" component="span">Görev içeriği</Typography>
+        <Typography style={{ textDecoration: checked ? 'line-through' : 'none' }} variant="subtitle1" component="span">{gorev.content}
+        </Typography>
       </CardContent>
     </Card>
   )
