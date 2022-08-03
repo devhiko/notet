@@ -58,11 +58,11 @@ const NotListe = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box className={styles.addmodal} component='form'>
+        <Box className={styles.addmodal} component='form' onSubmit={() => console.log('test')}>
           <Typography sx={{ textAlign: 'center' }} gutterBottom variant="h6" component="h6">Not Ekleyin</Typography>
-          <TextField size='small' label='Not başlığı'></TextField>
-          <TextField size='small' label='Not içeriği'></TextField>
-          <Button variant="contained" color='secondary'>Ekle</Button>
+          <TextField size='small' fullWidth label='Not başlığı' placeholder="Buraya notunuzu yazın" required /> <br />
+          <TextField rows={10} size='small' fullWidth label='Not içeriği' placeholder="Buraya notunuzu yazın" multiline required /> <br />
+          <Button variant="contained" color='secondary' type='submit'>Ekle</Button>
         </Box>
       </Modal>
     </>
